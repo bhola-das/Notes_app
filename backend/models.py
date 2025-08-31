@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 
-# ================= User Models =================
+
 class User(BaseModel):
     name: str
     email: EmailStr
@@ -11,7 +11,7 @@ class UserLogin(BaseModel):
     email: EmailStr
     password: str
 
-# ================= Note Models =================
+
 class NoteCreate(BaseModel):
     title: str
     content: str
@@ -27,4 +27,4 @@ class NoteResponse(BaseModel):
     user_id: str
 
     class Config:
-        from_attributes = True   # ✅ Pydantic v2 fix
+        from_attributes = True   
